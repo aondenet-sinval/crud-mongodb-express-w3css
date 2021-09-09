@@ -8,6 +8,15 @@ router.get('/', function(req, res, next) {
 });
 
 
+router.get('/user', async (req, res) => {
+  const db = require("../dbcad");
+  const Users = db.Mongoose.model('customers', db.CustomerSchema, 'customers');
+
+  const docs = await Users.find({}).lean().exec();
+  res.render('user', { docs });
+});
+
+
 /* GET all customers. */
 router.get('/customers', function (req, res, next) {
     var db = require('../dbcad');

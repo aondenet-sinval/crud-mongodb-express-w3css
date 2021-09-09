@@ -1,37 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>The Band</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script src="https://www.w3schools.com/lib/w3.js"></script>
+<%- include('./partials/head'); %>
 </head>
 <body>
- <!-- Navigation (Stays on Top) -->
-<div class="w3-top w3-bar w3-black">
-<a href="#home" class="w3-bar-item w3-button">Home</a>
+<header>
+<%- include('./partials/header'); %>
+</header>
 
-<a href="#members" class="w3-bar-item w3-button">Cadastro</a>
-<a href="#contact" class="w3-bar-item w3-button">Clientes</a>
-</div> 
-<div class="w3-container w3-main">
+<main>
 
-<div class="w3-container w3-margin w3-border w3-padding w3-header">
+<%- include('./partials/main'); %>
 
-
-    <h1>Links rápidos</h1>
-    <div class="w3-ul">
-    <li><a href="http://localhost:3000/customers" style="width:250px" class="w3-button w3-amber">Listar Clientes</a></li>
-    </div>
-    
-
-</div>
-</div>
-<div class="w3-container w3-footer">
-...
-</div>
-
+</main>
+<footer>
+<%- include('./partials/footer'); %>
+</footer>
+ 
 </body>
 
 </html>

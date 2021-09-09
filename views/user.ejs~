@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head></head>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/stylesheets/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
 
 <body>
-    <h1 class="text-center title-1"> Cadastro de Usu&aacute;rio </h1>
-    <form action="/user" method="post">
-        <p>Username:<input type="text" name="username" /></p>
-        <p>Email:<input type="text" name="email" /></p>
-        <p>Endereço:<input type="text" name="endereco" /></p>
-        <p><input type="submit" value="Salvar" /></p>
-    </form>
+
+<main>
+<div class="w3-container w3-mobile w3-block">
+
+    <h1 class="w3-text w3-auto"> Lista de Usu&aacute;rios </h1>
+    <ul>
+        <% docs.forEach((user)=> { %>
+            <div class="w3-container w3-display w3-bar-item w3-mobile w3-amber w3-border">
+                    Nome: <%= user.name %>.
+                     Email: <%= user.email %>.
+                      Endereço: <%= user.endereco %>.
+                       Telefone: <%= user.telefone %>.
+                    
+                </div>
+            <%})%>
+    </ul>
+
+</div>
+</main>
+<footer>
+<%- include('./partials/footer'); %>
+</footer>
 </body>
 
 </html>

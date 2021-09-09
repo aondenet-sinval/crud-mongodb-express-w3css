@@ -8,6 +8,18 @@ router.get('/', function(req, res, next) {
 });
 
 
+router.get('/user', async (req, res) => {
+  const db = require("../dbcad");
+  const Users = db.Mongoose.model('customers', db.CustomerSchema, 'customers');
+
+  const docs = await Users.find({}).lean().exec();
+  res.render('user', { docs });
+});
+
+router.get('/user', function(req, res, next) {
+  res.render('user', { title: 'Lista de usuarios' });
+});
+
 /* GET all customers. */
 router.get('/customers', function (req, res, next) {
     var db = require('../dbcad');
@@ -55,6 +67,21 @@ router.put('/customers/:id', function (req, res, next) {
             return;
         }
         res.json(req.body);
+        res.end();
+    });
+});
+
+/* DELETE ONE customer. */
+router.delete('/customers/:id', function (req, res, next) {
+    var db = require('../dbcad');
+    var Customer = db.Mongoose.model('customers', db.CustomerSchema, 'customers');
+    Customer.find({ _id: req.params.id }).remove(function (err) {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            res.end();
+            return;
+        }
+        res.json({success: true});
         res.end();
     });
 });
