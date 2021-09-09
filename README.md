@@ -6,5 +6,5 @@ Esse projeto pode ser baixado, mas precisará configurar o MongoDB de acordo com
 
 Havendo interesse em testar envie email para: sinvalsatv@gmail.com
 
-Se desejar ver um vídeo de 47 segundos do projeto no youtube. [w3css + Express + MongoDB](https://youtu.be/bbLkK7fcLN4).
+Se desejar ver um vídeo de 12 segundos do projeto no youtube. [CRUD: w3css + Express + MongoDB](https://www.youtube.com/watch?v=zUpX8FIC2Xk).
 
