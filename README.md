@@ -1,5 +1,7 @@
 # Express + w3.css + MongoDB
 
+Projeto com CRUD.
+
 Esse projeto pode ser baixado, mas precisará configurar o MongoDB de acordo com  o padrão do projeto.
 
 Havendo interesse em testar envie email para: sinvalsatv@gmail.com
