@@ -10,15 +10,12 @@
 <main>
 <div class="w3-container w3-mobile w3-block w3-margin-top w3-padding">
 
-    <h1 class="w3-text w3-auto"> Lista de Usu&aacute;rios </h1>
+    <h1 class="w3-text w3-auto"> Lista de postagens... </h1>
     <ul>
-        <% docs.forEach((user)=> { %>
+        <% docPost.forEach((bloger)=> { %>
             <div class="w3-container w3-display w3-bar-item w3-mobile w3-amber w3-border">
-                    Nome: <%= user.name %>.
-                     Email: <%= user.email %>.
-                      Endereço: <%= user.endereco %>.
-                       Telefone: <%= user.telefone %>.
-                    
+                    <h3 class="w3-cell"><%= bloger.title %>.</h3> 
+                     <h5 class="w3-cell"><%= bloger.conteudo %>.</h5>                   
                 </div>
             <%})%>
     </ul>

@@ -7,7 +7,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Api de Cadastro de Clientes' });
 });
 
-
+//GET Cadastro de produtos
+router.get('/cadastro', function(req, res, next) {
+  res.render('cadastro', { title: 'Cadastro de Produtos' });
+});
+//GET users
 router.get('/user', async (req, res) => {
   const db = require("../dbcad");
   const Users = db.Mongoose.model('customers', db.CustomerSchema, 'customers');
@@ -16,6 +20,23 @@ router.get('/user', async (req, res) => {
   res.render('user', { docs });
 });
 
+//Get Blog page
+router.get('/blog', async (req, res) => {
+  const db = require("../dbposts");
+  const Posts = db.Mongoose.model('posts', db.PostSchema, 'posts');
+
+  const docPost = await Posts.find({}).lean().exec();
+  res.render('blog', { docPost });
+});
+
+//Get Loja - Store
+router.get('/store', async (req, res) => {
+  const dbs = require("../dbloja");
+  const Prods = dbs.Mongoose.model('store', dbs.ProdSchema, 'store');
+
+  const docProd = await Prods.find({}).lean().exec();
+  res.render('store', { docProd });
+});
 
 /* GET all customers. */
 router.get('/customers', function (req, res, next) {

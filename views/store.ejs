@@ -10,16 +10,15 @@
 <main>
 <div class="w3-container w3-mobile w3-block w3-margin-top w3-padding">
 
-    <h1 class="w3-text w3-auto"> Lista de Usu&aacute;rios </h1>
+    <h1 class="w3-text w3-auto"> Nossa Loja </h1>
     <ul>
-        <% docs.forEach((user)=> { %>
+        <% docProd.forEach((loja)=> { %>
             <div class="w3-container w3-display w3-bar-item w3-mobile w3-amber w3-border">
-                    Nome: <%= user.name %>.
-                     Email: <%= user.email %>.
-                      Endereço: <%= user.endereco %>.
-                       Telefone: <%= user.telefone %>.
-                    
+                    <h3 class="w3-cell">Produto: <%= loja.prod %>.</h3>                
                 </div>
+                <h5 class="w3-cell">Descrição: <%= loja.descricao %>.</h5>    
+                <h5 class="w3-cell">Tamanho: <%= loja.tamanho %>.</h5>    
+                <h5 class="w3-cell">Preço: <%= loja.preco %>.</h5>    
             <%})%>
     </ul>
 
@@ -30,4 +29,4 @@
 </footer>
 </body>
 
-</html>
+</html><h1></h1>
